@@ -8,6 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "node server/server.js",
     "server": "nodemon server/server.js",
     "build": "webpack -d -w",
     "seed": "node database/fakeData/fakeData.js",
@@ -49,7 +50,11 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
-    "setupFilesAfterEnv": ["./setupTests.js"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ]
   }
 }
